@@ -14,13 +14,13 @@ public class Romanos {
 	public static String paraRomanos(int decimal) {
 		 int i, milhar, centenas, dezenas, unidades;
 		    String romanos = "";
-		   //obtenemos cada cifra del numero
+		  
 		    milhar = decimal / 1000;
 		    centenas = decimal / 100 % 10;
 		    dezenas = decimal / 10 % 10;
 		    unidades = decimal % 10;
 		
-		   //millar
+		   //milhar
 		    for (i = 1; i <= milhar; i++) {
 		       romanos = romanos + "M";
 		    }
