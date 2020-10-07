@@ -26,13 +26,13 @@ class ExerciciosDeLogicaTest {
   @Test
   void testGetMenor() {
     int[] numeros = new int[] {2, 3, 6, 7, 1, 4};
-    assertEquals(1, ExerciciosDeLogica.getMaior(numeros));
+    assertEquals(1, ExerciciosDeLogica.getMenor(numeros));
   }
 
   @Test
   void testGetMedia() {
     int[] numeros = new int[] {2, 3, 6, 7, 1, 4};
-    assertEquals(2.8, ExerciciosDeLogica.getMedia(numeros), 0.1);
+    assertEquals(3.8, ExerciciosDeLogica.getMedia(numeros), 0.1);
   }
 
   @Test
@@ -88,7 +88,7 @@ class ExerciciosDeLogicaTest {
     // CPFs inválidos
     assertFalse(ExerciciosDeLogica.validaCPF("443.344.420-06"));
     assertFalse(ExerciciosDeLogica.validaCPF("776.863.620-18"));
-    // Não são válidos CPFs formados por números iguais
+    //Não são válidos CPFs formados por números iguais
     assertFalse(ExerciciosDeLogica.validaCPF("000.000.000-00"));
     assertFalse(ExerciciosDeLogica.validaCPF("111.111.111-11"));
     assertFalse(ExerciciosDeLogica.validaCPF("222.222.222-22"));
@@ -100,7 +100,7 @@ class ExerciciosDeLogicaTest {
     assertEquals(1, ExerciciosDeLogica.fatorial(0));
     assertEquals(1, ExerciciosDeLogica.fatorial(1));
     assertEquals(2, ExerciciosDeLogica.fatorial(2));
-    assertEquals(5, ExerciciosDeLogica.fatorial(120));
+    assertEquals(120, ExerciciosDeLogica.fatorial(5));
   }
 
   @Test
