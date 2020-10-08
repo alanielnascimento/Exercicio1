@@ -76,6 +76,12 @@ class FacisaFlixTest {
     
     dark = new Serie("Dark", 2017, Estilo.FICCAO, Classificacao.DEZESSEIS_ANOS);
     
+    // Adicionar as séries no facisaFlix
+    facisaFlix.adicionaSerie(friends);
+    facisaFlix.adicionaSerie(twinPeaks);
+    facisaFlix.adicionaSerie(ahs);
+    facisaFlix.adicionaSerie(dark);
+    
     // Registra as visualizações
     facisaFlix.registraVisualizacao(joao, ahsS01E01, 4);
     facisaFlix.registraVisualizacao(joao, frS01E01, 3);
@@ -99,7 +105,7 @@ class FacisaFlixTest {
     assertTrue(series.contains(twinPeaks));
     assertTrue(series.contains(dark));
     
-    series = facisaFlix.getSeriesPorEstilo(Estilo.DRAMA);
+    series = facisaFlix.getSeriesPorEstilo(Estilo.TERROR);
     assertTrue(series.contains(ahs));
   }
 
@@ -128,7 +134,7 @@ class FacisaFlixTest {
   @Test
   void testGetSeriesQueViu() {
     List<Serie> series = facisaFlix.getSeriesQueViu(maria);
-    assertTrue(series.contains(dark));
+    assertTrue(series.contains(twinPeaks));
     assertTrue(series.contains(ahs));
   }
 
